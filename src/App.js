@@ -28,7 +28,7 @@ function App() {
   const [error, setError] = useState(false)
 
   const getValueFromAPI = async (val) => {
-    const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=d8e413bafdfc4bd09ba120244222201&q=${val.trim()}&days=2&aqi=no&alerts=no`);
+    const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=d8e413bafdfc4bd09ba120244222201&q=${val.trim()}&days=2&aqi=no&alerts=no`);
     if (!response.ok) {
       setError(true)
       throw new Error('Something went wrong')
