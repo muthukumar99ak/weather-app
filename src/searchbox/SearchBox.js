@@ -65,7 +65,7 @@ const SearchBox = (props) => {
                                             {hourItem.time.split(' ')[1]}
                                         </p>
                                         <div className='foreImgCont'>
-                                            <img src={hourItem.condition.icon} />
+                                            <img src={hourItem.condition.icon} alt={hourItem.condition.text} />
                                             <p>{hourItem.condition.text}</p>
                                         </div>
                                     </div>

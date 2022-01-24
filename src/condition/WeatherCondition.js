@@ -31,7 +31,7 @@ function WeatherCondition(props) {
                     </p>
                 </div>
                 <div className='conditionCont'>
-                    <img src={props.data.current.condition.icon} />
+                    <img src={props.data.current.condition.icon} alt={props.data.current.condition.text} />
                     <p className='weaCondition'>{props.data.current.condition.text}</p>
                 </div>
             </div>
