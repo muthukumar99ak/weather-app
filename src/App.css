@@ -44,7 +44,7 @@ body, *{
   font-size: 55px;
   color: #fff;
   margin-bottom: 20px;
-  line-height: 35px;
+  line-height: 55px;
 }
 
 .weaTime, .weaCondition{
@@ -307,4 +307,137 @@ body, *{
   margin-top: 10px;
   font-weight: 300;
   display: inline-block;
+}
+
+.weaMobile{
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .weaTimeCont{
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 992px){
+  .searchBoxCont{
+    min-width: 250px;
+    width: 100%;
+    right: 0;
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+  .weaTimeCont{
+    display: none;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .weaMobile > div{
+    padding: 0;
+    background: unset;
+    position: relative;
+    margin-top: 25px;
+  }
+  .weaMobile .weaTimeCont{
+    display: flex;
+  }
+  .weaPlace {
+    font-size: 17px;
+    color: #fff;
+    margin-bottom: 5px;
+    line-height: 25px;
+  }
+  .weaTime, .weaCondition {
+    color: #fff;
+    font-size: 12px;
+  }
+  .weaMobile{
+    display: block;
+  }
+  .weaTime{
+    white-space: nowrap;
+  }
+  .weaDegree{
+    font-size: 50px;
+    line-height: 50px;
+  }
+  .conditionCont{
+    margin-left: 10px;
+  }
+  .degSup {
+    position: absolute;
+    font-size: 18px;
+    vertical-align: text-top;
+    top: -25px;
+    right: -3px;
+  }
+  .conditionCont img {
+    width: 60px;
+    margin-bottom: -4px;
+  }
+  .weaCondition{
+    text-align: center;
+  }
+  .searchInput{
+    font-size: 18px;
+    height: 45px;
+    line-height: 35px;
+  }
+  .recentListCont li button{
+    padding: 6px 0;
+    font-size: 16px;
+  }
+  .recentListCont li button:nth-child(2) {
+    font-size: 13px;
+  }
+  .recentListCont, .foreCastCont, .weatherDetails{
+    padding: 15px 0;
+  }
+  .weTitle {
+    font-size: 18px;
+  }
+  .weDeHead {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+  .weatherDetails li{
+    padding: 9px 0;
+  }
+  .weatherDetails li p{
+    font-size: 15px;
+  }
+  .foreData{
+    font-size: 15px;
+    margin-top: 15px;
+  }
+  .foreDateCont{
+    gap: 10px;
+  }
+  .foreTime{
+    font-size: 13px;
+  }
+  .foreImgCont{
+    width: 101px;
+    padding: 10px 7px;
+  }
+  .foreImgCont img {
+    width: 54px;
+  }
+  .searchBoxSub {
+    padding: 10px 20px;
+  }
+  .searchImg {
+    width: 25px;
+    margin: 5px 10px 0 0;
+  }
+  .foreImgCont p{
+    font-size: 12px;
+  }
+  .detailsCont{
+    display: block;
+  }
 }

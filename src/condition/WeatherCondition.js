@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from "styled-components";
 
 function WeatherCondition(props) {
@@ -11,6 +12,7 @@ function WeatherCondition(props) {
         z-index: -1;
         background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url(https://source.unsplash.com/random/900%C3%97700/?weather?${props.data.current.condition.text.split(' ').join('_')}) no-repeat center center /cover;
     `
+
 
     return (
         <Background>
@@ -39,4 +41,4 @@ function WeatherCondition(props) {
     )
 }
 
-export default WeatherCondition;
+export default React.memo(WeatherCondition);

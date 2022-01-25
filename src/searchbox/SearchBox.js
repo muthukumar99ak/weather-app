@@ -1,4 +1,6 @@
+import React from 'react';
 import search from '../assets/images/search.png';
+import WeatherCondition from '../condition/WeatherCondition';
 
 const SearchBox = (props) => {
     return <form onSubmit={props.handleSubmit} className={`searchBoxCont ${props.searchActive ? 'active' : null}`}>
@@ -25,6 +27,9 @@ const SearchBox = (props) => {
                         })}
                     </ul>
                 </div>
+                <div className='weaMobile'>
+                    <WeatherCondition data={props.data} months={props.months} />
+                </div>
                 <div className='weatherDetails'>
                     <h3 className='weTitle'>{props.data.location.name}</h3>
                     <h6 className='weDeHead'>Weather Details</h6>
@@ -46,7 +51,7 @@ const SearchBox = (props) => {
                 <div className='foreCastCont'>
                     <h6 className='weDeHead'>Forecast</h6>
                     {props.data.forecast.forecastday.map((item, index) => {
-                        return <>
+                        return <React.Fragment key={index}>
                             <h6 className='foreData'>
                                 <span> {Math.abs(item.date.split(' ')[0].split('-')[2])}</span>
                                 <span> {props.months.map(monthItem => {
@@ -60,7 +65,7 @@ const SearchBox = (props) => {
                             </h6>
                             <div className='foreDateCont'>
                                 {item.hour.map((hourItem, hourIndex) => {
-                                    return <div>
+                                    return <div key={hourIndex}>
                                         <p className='foreTime'>
                                             {hourItem.time.split(' ')[1]}
                                         </p>
@@ -71,7 +76,7 @@ const SearchBox = (props) => {
                                     </div>
                                 })}
                             </div>
-                        </>
+                        </React.Fragment>
                     })}
                 </div>
             </div>
