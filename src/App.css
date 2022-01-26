@@ -326,9 +326,7 @@ body, *{
     right: 0;
     -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: column;
+    display: block;
   }
   .weaTimeCont{
     display: none;
@@ -340,6 +338,7 @@ body, *{
     padding: 0;
     background: unset;
     position: relative;
+    z-index: 2;
     margin-top: 25px;
   }
   .weaMobile .weaTimeCont{
@@ -415,7 +414,10 @@ body, *{
     margin-top: 15px;
   }
   .foreDateCont{
-    gap: 10px;
+    gap: 0px;
+  }
+  .foreDateCont>div{
+    margin-right: 10px;
   }
   .foreTime{
     font-size: 13px;
@@ -423,6 +425,7 @@ body, *{
   .foreImgCont{
     width: 101px;
     padding: 10px 7px;
+    background: rgb(0 0 0 / 22%);
   }
   .foreImgCont img {
     width: 54px;
