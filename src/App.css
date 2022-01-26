@@ -327,6 +327,7 @@ body, *{
     -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
     display: block;
+    top: 20px;
   }
   .weaTimeCont{
     display: none;
