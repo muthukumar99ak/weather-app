@@ -327,7 +327,7 @@ body, *{
     -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
     display: block;
-    top: 20px;
+    top: 50px;
   }
   .weaTimeCont{
     display: none;
@@ -416,6 +416,7 @@ body, *{
   }
   .foreDateCont{
     gap: 0px;
+    margin-bottom: 14px;
   }
   .foreDateCont>div{
     margin-right: 10px;
@@ -432,7 +433,7 @@ body, *{
     width: 54px;
   }
   .searchBoxSub {
-    padding: 10px 20px;
+    padding: 10px 20px 70px;
   }
   .searchImg {
     width: 25px;
